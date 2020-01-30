@@ -10,7 +10,7 @@ Also a Python version can be found [here](https://github.com/maxme1/pyflubber).
 ## Usage
 
 ```dart
-import 'package:dart_flubber/interpolate.dart';
+import 'package:dart_flubber/dart_flubber.dart';
 
 main(){
   // `first` and `second` are lists of points

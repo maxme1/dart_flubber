@@ -1,1 +1,1 @@
-export 'interpolate.dart';
+export 'src/interpolate.dart';

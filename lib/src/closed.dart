@@ -1,5 +1,5 @@
 import 'dart:math';
-import 'math.dart' as math;
+import './math.dart' as math;
 
 prepare(List<Point> start, List<Point> stop) {
   start = normalize(start);
@@ -25,14 +25,14 @@ num getArea(List<Point> contour) {
   return area / 2;
 }
 
-normalize(List<Point> line) {
+List<Point> normalize(List<Point> line) {
   if (getArea(line) > 0) {
     line = line.reversed.toList();
   }
   return line;
 }
 
-rotate(List<Point> line, List<Point> reference) {
+List<Point> rotate(List<Point> line, List<Point> reference) {
   var len = line.length, min = double.infinity, bestOffset = 0;
 
   for (var offset = 0; offset < len; offset++) {
@@ -55,7 +55,7 @@ rotate(List<Point> line, List<Point> reference) {
   return line;
 }
 
-addPoints(List<Point> line, int numPoints) {
+List<Point> addPoints(List<Point> line, int numPoints) {
   line = List<Point>.from(line);
   line.insert(line.length, line.first);
 

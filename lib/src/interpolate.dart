@@ -16,6 +16,7 @@ List<Point> _normalize_line(List<Point> line) {
   return line;
 }
 
+/// Creates a function that interpolates from [start] to [stop].
 Function interpolator(List<Point> start, List<Point> stop,
     {bool closed = true}) {
   start = _normalize_line(start);
@@ -43,6 +44,7 @@ Function interpolator(List<Point> start, List<Point> stop,
   return interpolator;
 }
 
+/// Interpolates from [start] to [stop] with the interpolation parameter [t].
 List<Point> interpolate(List<Point> start, List<Point> stop, num t,
     {bool closed = true}) {
   t = _normalize_parameter(t);

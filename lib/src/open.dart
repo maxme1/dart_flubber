@@ -1,5 +1,5 @@
 import 'dart:math';
-import 'math.dart';
+import './math.dart';
 
 prepare(List<Point> start, List<Point> stop) {
   // handling a possible flip
