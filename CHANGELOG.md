@@ -1,3 +1,7 @@
+## 0.1.2
+
+- Support for lines containing a single point.
+
 ## 0.1.1
 
 - Fixed some code style issues

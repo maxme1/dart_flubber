@@ -1,6 +1,6 @@
 name: dart_flubber
 homepage: https://github.com/maxme1/dart_flubber
-version: 0.1.1
+version: 0.1.2
 
 description: Linear interpolation of open and closed lines for Dart.
 

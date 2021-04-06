@@ -12,6 +12,7 @@ List<num> getFractions(List<Point> line) {
 }
 
 Point interpolatePoint(num x, List<num> xs, List<Point> line) {
+  if (line.length == 1) return line.first;
   assert(x >= xs.first);
   assert(x <= xs.last);
   if (x == xs.first) return line.first;
