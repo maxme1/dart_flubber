@@ -1,3 +1,7 @@
+## 0.2.0
+
+- Null-safety support
+
 ## 0.1.2
 
 - Support for lines containing a single point.

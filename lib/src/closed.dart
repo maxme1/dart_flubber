@@ -33,10 +33,11 @@ List<Point> normalize(List<Point> line) {
 }
 
 List<Point> rotate(List<Point> line, List<Point> reference) {
-  var len = line.length, min = double.infinity, bestOffset = 0;
+  int len = line.length, bestOffset = 0;
+  double min = double.infinity;
 
   for (var offset = 0; offset < len; offset++) {
-    num sumOfSquares = 0;
+    double sumOfSquares = 0;
 
     for (var i = 0; i < line.length; i++) {
       sumOfSquares += line[(offset + i) % len].squaredDistanceTo(reference[i]);

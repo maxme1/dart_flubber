@@ -16,8 +16,10 @@ List<Point> _normalize_line(List<Point> line) {
   return line;
 }
 
+typedef Interpolator = List<Point> Function(num);
+
 /// Creates a function that interpolates from [start] to [stop].
-Function interpolator(List<Point> start, List<Point> stop,
+Interpolator interpolator(List<Point> start, List<Point> stop,
     {bool closed = true}) {
   start = _normalize_line(start);
   stop = _normalize_line(stop);
@@ -32,7 +34,7 @@ Function interpolator(List<Point> start, List<Point> stop,
     stop = prepared[1];
   }
 
-  List<Point> interpolator(t) {
+  List<Point> interpolator(num t) {
     t = _normalize_parameter(t);
     List<Point> result = [];
     for (var i = 0; i < start.length; i++) {
